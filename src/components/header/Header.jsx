@@ -96,7 +96,7 @@ const Header = () => {
             </li>
             <li className="nav-item uppercase">
               <a
-                href="../../../public/assets/N.K. Amissah Resume.pdf"
+                href="../../../public/assets/Nicholas-Amissah-Resume.pdf"
                 type="button"
                 target="_blank"
                 className="inline-block bg-green-600 text-white p-3 rounded animate__animated animate__pulse animate__infinite animate__fast md:w-[10rem] text-center"
