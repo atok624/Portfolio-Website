@@ -2,13 +2,15 @@
 
 # My Portfolio
 
-> Developing my portfolio page from scratch.
-> This project gives detailed information about:
-- Who Kwasi Baayeh is?
+``` sh
+ Developing my portfolio page from scratch.
+ This project gives detailed information about:
+```
+- Who Nicholas Amissah is
 - My skills
 - Projects I have worked on
 - My Resume
-
+- Recommendations from LinkedIn
 
 ## Built With
 
@@ -20,28 +22,82 @@
 
 [Live Demo Link](http://my-portfolio-baayeh.vercel.app/)
 
-## Getting Started
+## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these steps.
 
-- Clone the repo to your local environment
-- Run `npm install` to install all dependencies
-- Run `npm run dev` to open the project in your browser.
-- Modify to your taste with your preferred text editor
-- Enjoy :)
+### Prerequisites
 
-## Authors
+In order to run this project you need:
 
-👤 **Kwasi Baayeh**
+- An npm installed on your syatem.
 
-- GitHub: [@githubhandle](https://github.com/Baayeh)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/kabaayeh)
+#### Windows
+
+[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi)
+
+#### Linux
+
+```sh
+ sudo apt install nodejs
+```
+
+#### MacOS
+
+[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0.pkg)
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+git clone https://github.com/atok624/Portfolio-Website.git && cd Portfolio-Website
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  npm install
+```
+
+### Running Tests
+
+To to test the project, checkout [Jest](https://jestjs.io/)
+
+```sh
+npm install jest --save-dev
+```
+
+Then, to start the test:
+
+```sh
+  npm run test
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run dev
+```
+
+
+## Authors <a name="authors"></a>
+
+👤 **Nicholas Amissah**
+
+- GitHub: [Nicholas Amissah](https://github.com/atok624)
+- Twitter: [Nicholas Amissah](https://twitter.com/MysticalAmissah)
+- LinkedIn: [Nicholas Amissah](https://www.linkedin.com/in/nicholas-amissah-153b09154)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/atok624/Portfolio-Website/issues).
 
 ## Acknowledgments
 
