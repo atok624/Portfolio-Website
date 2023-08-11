@@ -28,6 +28,17 @@ const Contact = () => {
               <p className="text-slate-300">(+233)55 541 4077</p>
             </div>
           </div>
+
+          <div className="mb-6 lg:flex hidden items-center gap-5">
+            <div className="bg-green-600 p-4 rounded">
+              <IoLogoWhatsapp className="text-2xl" />
+            </div>
+            <div>
+              <h4 className="font-bold">Whatsapp Number</h4>
+              <p className="text-slate-300">(+233)55 541 4077</p>
+            </div>
+          </div>
+
           <div className="mb-6 lg:flex hidden items-center gap-5">
             <div className="bg-green-600 p-4 rounded">
               <TfiEmail className="text-2xl" />
@@ -110,7 +121,7 @@ const Contact = () => {
           <input type="hidden" name="_captcha" value="false"></input>
           <input type="hidden" name="_subject" value="New Client"></input>
           <input type="hidden" name="_template" value="table"></input>
-          <input type="hidden" name="_next" value="my-portfolio-xi-swart.vercel.app/thanks"></input>
+          <input type="hidden" name="_next" value="https://my-portfolio-xi-swart.vercel.app/thanks"></input>
           <div className="form-action mb-6 sm:w-[30rem] mx-auto">
             <button
               type="submit"
