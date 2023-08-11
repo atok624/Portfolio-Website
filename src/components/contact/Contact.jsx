@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 className="font-bold">Phone Number</h4>
-              <p className="text-slate-300">(+233)54 809 1237</p>
+              <p className="text-slate-300">(+233)55 541 4077</p>
             </div>
           </div>
           <div className="mb-6 lg:flex hidden items-center gap-5">
@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 className="font-bold">Email Address</h4>
-              <p className="text-slate-300">kabaayeh@gmail.com</p>
+              <p className="text-slate-300">Atok948@gmail.com</p>
             </div>
           </div>
 
@@ -44,32 +44,25 @@ const Contact = () => {
             </p>
             <div className="socials flex justify-center lg:justify-start gap-6 mt-2">
               <a
-                href="https://github.com/Baayeh"
+                href="https://github.com/atok624"
                 target="_blank"
                 className="text-2xl"
               >
                 <BsGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/kabaayeh"
+                href="https://www.linkedin.com/in/nicholas-amissah/"
                 className="text-2xl"
                 target="_blank"
               >
                 <BsLinkedin />
               </a>
               <a
-                href="https://twitter.com/Cest_Baayeh"
+                href="https://twitter.com/MysticalAmissah"
                 className="text-2xl"
                 target="_blank"
               >
                 <BsTwitter />
-              </a>
-              <a
-                href="https://web.facebook.com/kwasiantwi.baayeh"
-                className="text-2xl"
-                target="_blank"
-              >
-                <BsFacebook />
               </a>
             </div>
           </div>
@@ -77,7 +70,7 @@ const Contact = () => {
       </section>
 
       <section className="mt-10">
-        <form action="https://formsubmit.co/kabaayeh@gmail.com" method="POST">
+        <form action="https://formsubmit.co/atok948@gmail.com" method="POST">
           <div className="form-control mb-6 sm:w-[30rem] mx-auto">
             <label htmlFor="name">
               <input
