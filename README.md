@@ -19,12 +19,7 @@
 
 
 ## Live Demo
-
-<<<<<<< HEAD
 [Live Demo Link](https://nicholas-k-amissah.onrender.com)
-=======
-[Live Demo Link](https://nicholas-amissah.onrender.com)
->>>>>>> fca4ac67e01fb93277f46391269ffea280bff743
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
