@@ -157,7 +157,7 @@ const Footer = () => {
         </ul>
         <div className="footer-actions mt-8 flex flex-col items-center gap-4">
           <a
-            href="../../../public/assets/Nicholas-Amissah-Resume.pdf.pdf"
+            href="https://drive.google.com/file/d/1zNOMUe_ljw8FhsuWcDpxzE_VAjw22o63/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 px-6 py-3 rounded animate__animated animate__pulse animate__infinite animate__fast text-white hover:bg-green-700 transition"
