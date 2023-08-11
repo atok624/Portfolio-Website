@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-[Live Demo Link](http://my-portfolio-baayeh.vercel.app/)
+[Live Demo Link](https://nicholas-k-amissah.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
