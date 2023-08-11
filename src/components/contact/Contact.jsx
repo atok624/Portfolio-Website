@@ -121,7 +121,7 @@ const Contact = () => {
           <input type="hidden" name="_captcha" value="false"></input>
           <input type="hidden" name="_subject" value="New Client"></input>
           <input type="hidden" name="_template" value="table"></input>
-          <input type="hidden" name="_next" value="https://my-portfolio-xi-swart.vercel.app/thanks"></input>
+          <input type="hidden" name="_next" value="https://nicholas-amissah.vercel.app/thanks"></input>
           <div className="form-action mb-6 sm:w-[30rem] mx-auto">
             <button
               type="submit"
