@@ -17,9 +17,8 @@
 - React
 - Tailwindcss
 
-
 ## Live Demo
-[Live Demo Link](https://nicholas-k-amissah.onrender.com)
+[Live Demo Link](https://nicholas-amissah.vercel.app/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -29,7 +28,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- An npm installed on your syatem.
+- An npm installed on your system.
 
 #### Windows
 
