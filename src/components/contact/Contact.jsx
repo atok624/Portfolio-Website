@@ -104,6 +104,7 @@ const Contact = () => {
                 placeholder="Write your message..."
                 required
                 rows="6"
+                autoComplete="off"
               />
             </label>
           </div>
