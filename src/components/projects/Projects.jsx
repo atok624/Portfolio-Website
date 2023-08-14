@@ -28,7 +28,7 @@ const Projects = () => {
               />
             </div>
             <div className="card-content mt-3 w-full">
-              <p className="text-slate-500 mt-4">{project.description}</p>
+            <p className="text-slate-500 mt-4" style={{ color: "white" }}>{project.description}</p>
 
               <div className="languages flex justify-center flex-wrap gap-2 my-4">
                 {project.languages?.map((language) => (
