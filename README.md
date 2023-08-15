@@ -91,7 +91,7 @@ To run the project, execute the following command:
 - Twitter: [Nicholas Amissah](https://twitter.com/MysticalAmissah)
 - LinkedIn: [Nicholas Amissah](https://www.linkedin.com/in/nicholas-amissah-153b09154)
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
