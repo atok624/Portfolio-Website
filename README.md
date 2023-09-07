@@ -1,4 +1,4 @@
-<h1 style="text-align:center">![](https://img.shields.io/badge/Microverse-blueviolet)</h1>
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My Portfolio
 
