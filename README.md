@@ -1,6 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<h1 style="text-align:center">![](https://img.shields.io/badge/Microverse-blueviolet)</h1>h1>
 
-#My Portfolio
+# My Portfolio
 
 ``` sh
  Developing my portfolio page from scratch.
