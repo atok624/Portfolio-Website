@@ -11,7 +11,7 @@ const Testimonials = () => {
           Here are some Recommendations from clients and colleagues.
         </p>
         <iframe
-          src="https://widgets.sociablekit.com/linkedin-recommendations/iframe/177532"
+          src="https://widgets.sociablekit.com/linkedin-recommendations/iframe/25358374"
           frameBorder="0"
           width="100%"
           height="590"
