@@ -182,7 +182,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <hr />
+          <hr>
         </section>
       </div>
     </header>
