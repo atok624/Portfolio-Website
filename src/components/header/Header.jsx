@@ -182,9 +182,9 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <hr>
         </section>
       </div>
+      <div classname="border border-indigo-600 ..."></div>
     </header>
   );
 };
