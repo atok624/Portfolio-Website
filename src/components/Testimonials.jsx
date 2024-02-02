@@ -10,12 +10,12 @@ const Testimonials = () => {
         <p className="text-base md:text-lg lg:text-center font-bold text-green-600 mb-2">
           Here are some Recommendations from clients and colleagues.
         </p>
-        <iframe
-          src="https://widgets.sociablekit.com/linkedin-recommendations/iframe/25358374"
-          frameBorder="0"
-          width="100%"
-          height="590"
-        ></iframe>
+        <iframe 
+          src='https://widgets.sociablekit.com/linkedin-recommendations/iframe/25358374' 
+          frameborder='0' 
+          width='100%' 
+          height='590'>
+        </iframe>
       </div>
     </div>
   )
