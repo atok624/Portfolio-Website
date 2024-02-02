@@ -182,6 +182,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <hr />
         </section>
       </div>
     </header>
