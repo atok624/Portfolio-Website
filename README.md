@@ -97,7 +97,7 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/atok624/Portfolio-Website/issues).
 
-## Acknowledgments
+## Acknowledgment
 
 - Microverse' linting procedure
 
