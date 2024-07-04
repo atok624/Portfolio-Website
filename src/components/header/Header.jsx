@@ -172,7 +172,7 @@ const Header = () => {
                     <BsLinkedin />
                   </a>
                   <a
-                    href="https://twitter.com/MysticalAmissah"
+                    href="https://x.com/NicholasAmisah"
                     className="text-2xl"
                     target="_blank"
                   >
