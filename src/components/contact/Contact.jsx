@@ -30,9 +30,11 @@ const Contact = () => {
           </div>
 
           <div className="mb-6 lg:flex hidden items-center gap-5">
-            <div className="bg-green-600 p-4 rounded">
-              <IoLogoWhatsapp className="text-2xl" />
-            </div>
+            <a href="https://wa.me/233555414077" target="_blank" rel="noopener noreferrer">
+      <div className="bg-green-600 p-4 rounded">
+        <IoLogoWhatsapp className="text-2xl" />
+      </div>
+    </a>
             <div>
               <h4 className="font-bold">Whatsapp Number</h4>
               <p className="text-slate-300">(+233)55 541 4077</p>
