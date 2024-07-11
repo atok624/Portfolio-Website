@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   const downloadPdf = () => {
-    const url = "/assets/Nicholas-Amissah-Resume.pdf";
+    const url = "/assets/Nicholas_Amissah_CV.pdf";
     fetch(url).then((res) => {
       res.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
