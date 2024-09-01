@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100">
+    <div className="flex flex-col items-center justify-center bg-gray-400">
       <div className="container mx-auto my-4 bg-white p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl md:text-4xl lg:text-center font-bold text-slate-700 mb-4">
           What People Are Saying

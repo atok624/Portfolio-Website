@@ -112,9 +112,6 @@ const Header = () => {
         </div>
 
         <section id="about" className=" px-4 py-14 md:p-14 lg:px-36 md:my-8">
-          <h3 className="md:text-center lg:text-center lg:mb-14 mb-1 text-5xl lg:text-7xl mt-5 md:mt-0 font-bold before:w-36 lg:before:w-52 before:h-1 before:bg-green-600 relative before:absolute before:bottom-0 xl:mt-[2rem]">
-            About me
-          </h3>
           <div className="md:flex gap-8 items-center">
             <div className="profile-img hidden md:block rounded-full overflow-hidden">
               <img

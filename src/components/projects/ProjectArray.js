@@ -6,7 +6,7 @@ const projects = [
       "https://res.cloudinary.com/dnkzdjigk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1691540710/Capture_adstck.png",
     description:
       "The Frugalize app helps you to manage your budget. The app allows users to create categories and add transactions to the categories.",
-    languages: ["ruby", "ruby-on-rails", "postgresql", "devise", "bootstrap5"],
+    languages: ["ruby", "ruby-on-rails", "postgresql"],
     demo: "https://frugalize.onrender.com/",
     source: "https://github.com/atok624/book-a-room-frontend.git",
   },
@@ -32,8 +32,7 @@ const projects = [
       "react",
       "redux",
       "restful api",
-      "webpack",
-      "tailwindcss",
+      "webpack"
     ],
     demo: "https://space-travelers-hub-6t7j.onrender.com/",
     source: "https://github.com/atok624/space_travelers-hub.git",
@@ -45,7 +44,7 @@ const projects = [
       "https://res.cloudinary.com/dnkzdjigk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1691542380/Capture3_tbt4hi.png",
     description:
       "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external API",
-    languages: ["Javasript", "webpack", "restful api", "tailwindcss"],
+    languages: ["Javasript", "webpack", "restful api"],
     demo: "https://leaderboard-xzry.onrender.com/",
     source: "https://github.com/atok624/Leaderboard.git",
   },
@@ -58,9 +57,7 @@ const projects = [
       '"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote."',
     languages: [
       "javascript",
-      "es6 concept",
       "restful api",
-      "webpack",
       "bootstrap",
     ],
     demo: "https://math-magician-5re0.onrender.com/",
@@ -73,7 +70,7 @@ const projects = [
       "https://res.cloudinary.com/dnkzdjigk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1691547184/Capture5_egxnxk.png",
     description:
       'Timbuktu Institute  is a program made with Html, CSS and JavaScript. It comprises of two pages of Desktop and two pages of mobile.',
-    languages: ["JavaScript", "tailwindcss", "HTML", "CSS"],
+    languages: ["JavaScript", "tailwindcss", "HTML",],
     demo: "https://capstone-uuaa.onrender.com/index.html",
     source: "https://github.com/atok624/Capstone_Project1.git",
   },

@@ -1,0 +1,5 @@
+.slick-prev, .slick-next {
+    font-size: 16px; 
+    color: #333;
+    z-index: 10; 
+  }

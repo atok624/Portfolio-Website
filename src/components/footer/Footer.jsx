@@ -15,8 +15,8 @@ import { faGem, faCode, faTools } from "@fortawesome/free-solid-svg-icons"; // A
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-900">
-      <div className="footer absolute top-0 w-full justify-center p-4 md:px-14 bg-[#11001d] content">
+    <footer className="">
+      <div className="footer top-0 w-full justify-center p-4 md:px-14 content bg-white">
         <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-orange-500 tracking-wider mb-8">
           Stacks Under My Belt
         </p>
@@ -155,7 +155,8 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <div className="footer-actions mt-8 flex flex-col items-center gap-4">
+      </div>
+      <div className="footer-actions mt-8 flex flex-col items-center bg-green gap-4">
           <a
             href="https://drive.google.com/file/d/1zNOMUe_ljw8FhsuWcDpxzE_VAjw22o63/view?usp=sharing"
             target="_blank"
@@ -171,7 +172,6 @@ const Footer = () => {
             <p>&copy; {new Date().getFullYear()}</p>
           </div>
         </div>
-      </div>
     </footer>
   );
 };

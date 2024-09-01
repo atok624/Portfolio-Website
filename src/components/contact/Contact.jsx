@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-[#11001d] p-4 mt-8 lg:flex justify-center items-center lg:p-14 lg:gap-16"
+      className="bg-[#11001d] p-4 mt-8 lg:flex justify-center items-center lg:p-14 lg:gap-16 bg-slate-900"
     >
       <section className="text-center my-4 lg:text-start">
         <h3 className="font-bold text-2xl">Get In Touch With Me</h3>
