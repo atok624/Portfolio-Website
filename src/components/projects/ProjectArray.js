@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Study Buddy",
     image:
-      "https://ibb.co/VThtvNZ",
+      "https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448501/Dashboard_fmnx4s.png",
     description:
       "StudyBuddy is a personal assistant created for students to help them manage their life in school.",
     languages: ["react", "firebase", "bootstrap"],
@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "Purpool",
     image:
-      "https://ibb.co/rvcHJBy",
+      "https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448473/Screenshot_2024-05-16_204951_hmw79c.png",
     description:
       "This project is a modern, user-friendly chat application built with React and Firebase",
     languages: ["react", "firebase", "tailwind"],
@@ -29,7 +29,7 @@ const projects = [
     description:
       "The Frugalize app helps you to manage your budget. The app allows users to create categories and add transactions to the categories.",
     languages: ["ruby", "ruby-on-rails", "postgresql"],
-    demo: "https://frugalize.onrender.com/",
+    demo: "https://book-my-room-2igi.onrender.com/",
     source: "https://github.com/atok624/book-a-room-frontend.git",
   },
   {
