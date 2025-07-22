@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import "./Header.module.css";
 
 const Header = () => {
@@ -99,7 +99,7 @@ const Header = () => {
             </li>
             <li className="nav-item uppercase">
               <a
-                href="https://drive.google.com/file/d/1zNOMUe_ljw8FhsuWcDpxzE_VAjw22o63/view?usp=sharing"
+                href="https://drive.google.com/file/d/10s0C908mGsXN0oKINqOi2vSFp3dTB8Ct/view?usp=sharing"
                 type="button"
                 target="_blank"
                 className="inline-block bg-green-600 text-white p-3 rounded animate__animated animate__pulse animate__infinite animate__fast md:w-[10rem] text-center"
@@ -174,6 +174,13 @@ const Header = () => {
                     target="_blank"
                   >
                     <BsTwitter />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@Joy-of-X"
+                    className="text-2xl"
+                    target="_blank"
+                  >
+                    <BsYoutube />
                   </a>
                 </div>
               </div>

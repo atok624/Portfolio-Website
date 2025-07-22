@@ -1,6 +1,6 @@
 import TextField from '@mui/material/TextField';
 import React from 'react';
-import { BsFacebook, BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import { BsFacebook, BsGithub, BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { FiPhoneCall } from 'react-icons/fi';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { TfiEmail } from 'react-icons/tfi';
@@ -76,6 +76,13 @@ const Contact = () => {
                 target="_blank"
               >
                 <BsTwitter />
+              </a>
+              <a
+                href="https://www.youtube.com/@Joy-of-X"
+                className="text-2xl"
+                target="_blank"
+              >
+                <BsYoutube />
               </a>
             </div>
           </div>
