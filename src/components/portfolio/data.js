@@ -1,7 +1,34 @@
 export const projects = [
-  { title: 'StudyBuddy', type: 'Productivity platform', image: 'https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448501/Dashboard_fmnx4s.png', description: 'A personal assistant that helps students organise their academic life and stay on top of school responsibilities.', contribution: 'Product development, interface implementation and Firebase integration.', stack: ['React', 'Firebase', 'Bootstrap'], demo: 'https://walking-buddy-636cb.web.app/', source: 'https://github.com/atok624/StudyBuddy' },
-  { title: 'Purpool', type: 'Real-time application', image: 'https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448473/Screenshot_2024-05-16_204951_hmw79c.png', description: 'A modern chat application designed for simple, responsive communication across devices.', contribution: 'Real-time messaging experience, responsive UI and Firebase services.', stack: ['React', 'Firebase', 'Tailwind CSS'], demo: 'https://github.com/atok624/Purpool-Chat-Application', source: 'https://github.com/atok624/Purpool-Chat-Application' },
-  { title: 'Book My Room', type: 'Full-stack booking platform', image: 'https://res.cloudinary.com/dnkzdjigk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1691540710/Capture_adstck.png', description: 'A full-stack application for discovering and reserving rooms through a focused booking experience.', contribution: 'Frontend experience, API integration and full-stack collaboration.', stack: ['React', 'Ruby on Rails', 'PostgreSQL'], demo: 'https://book-my-room-2igi.onrender.com/', source: 'https://github.com/atok624/book-a-room-frontend' },
+  {
+    title: 'StudyBuddy', type: 'Student productivity platform', status: 'Live deployment', statusTone: 'live',
+    image: 'https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448501/Dashboard_fmnx4s.png',
+    description: 'A single workspace that helps students organise notes, reminders, expenses, calendars and study plans.',
+    challenge: 'Student responsibilities are often split across disconnected tools, making school life harder to organise.',
+    built: 'I built the React application and connected its planning workflows to Firebase, with Formik-powered forms and focused tools for notes, reminders and schedules.',
+    highlight: 'Bringing several student workflows into one responsive dashboard while keeping each tool easy to reach.',
+    stack: ['React', 'Firebase', 'Formik', 'FullCalendar', 'React Quill'],
+    demo: 'https://walking-buddy-636cb.web.app/', demoLabel: 'Open live product', source: 'https://github.com/atok624/StudyBuddy',
+  },
+  {
+    title: 'Purpool', type: 'Collaborative real-time application', status: 'Repository only', statusTone: 'source',
+    image: 'https://res.cloudinary.com/dwbqtb6ck/image/upload/v1725448473/Screenshot_2024-05-16_204951_hmw79c.png',
+    description: 'A team-built chat experience with real-time conversations, media sharing and user controls.',
+    challenge: 'Messaging interfaces need to keep authentication, conversations and user state synchronized without slowing down the experience.',
+    built: 'Built collaboratively by a six-person team using Firebase Authentication, Firestore listeners, Storage uploads and Zustand state management.',
+    highlight: 'Real-time message updates, image uploads, chat search, read state and user blocking are handled through Firebase services.',
+    stack: ['React', 'Firebase', 'Firestore', 'Zustand', 'Vite'],
+    demo: null, demoLabel: null, source: 'https://github.com/atok624/Purpool-Chat-Application',
+  },
+  {
+    title: 'Book My Room', type: 'Collaborative full-stack platform', status: 'Live deployment', statusTone: 'live',
+    image: 'https://res.cloudinary.com/dnkzdjigk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1691540710/Capture_adstck.png',
+    description: 'A room-booking product for exploring rooms, estimating stay costs and managing reservations.',
+    challenge: 'The frontend needed to coordinate protected routes and several reservation flows with a separate Rails API.',
+    built: 'Built as a three-person collaboration with React and Redux, consuming a Ruby on Rails and PostgreSQL backend.',
+    highlight: 'Users can register, browse room details, create dated reservations, calculate stay costs and manage their rooms and bookings.',
+    stack: ['React', 'Redux Toolkit', 'Ruby on Rails API', 'PostgreSQL'],
+    demo: 'https://book-my-room-2igi.onrender.com/', demoLabel: 'Open live product', source: 'https://github.com/atok624/book-a-room-frontend',
+  },
 ];
 
 export const capabilities = [
