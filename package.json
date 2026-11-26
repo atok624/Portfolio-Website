@@ -9,31 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/material": "^5.11.13",
     "@vercel/analytics": "^1.0.0",
-    "animate.css": "^4.1.1",
-    "framer-motion": "^7.10.3",
-    "postcss": "^8.4.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.9.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.2.1",
-    "typewriter-effect": "^2.19.0"
+    "react-router-dom": "^6.9.0"
   },
   "devDependencies": {
-    "@heroicons/react": "^2.0.18",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
-    "autoprefixer": "^10.4.13",
     "vite": "^3.2.0"
   }
 }

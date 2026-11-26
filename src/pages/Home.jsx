@@ -1,18 +1,25 @@
 import React from 'react';
-import Contact from '../components/contact/Contact';
-import Footer from '../components/footer/Footer';
-import Header from '../components/header/Header';
-import Projects from '../components/projects/Projects';
-import Testimonials from '../components/Testimonials';
+import About from '../components/portfolio/About';
+import AiJourney from '../components/portfolio/AiJourney';
+import Hero from '../components/portfolio/Hero';
+import OpportunityContact from '../components/portfolio/OpportunityContact';
+import PortfolioFooter from '../components/portfolio/PortfolioFooter';
+import PortfolioHeader from '../components/portfolio/PortfolioHeader';
+import Recommendations from '../components/portfolio/Recommendations';
+import SelectedWork from '../components/portfolio/SelectedWork';
+import './Home.css';
 
-export const Home = () => {
-  return (
-    <>
-      <Header />
-      <Projects />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </>
-  );
-};
+const Home = () => (
+  <main className="portfolio-shell">
+    <PortfolioHeader />
+    <Hero />
+    <SelectedWork />
+    <AiJourney />
+    <About />
+    <Recommendations />
+    <OpportunityContact />
+    <PortfolioFooter />
+  </main>
+);
+
+export { Home };
