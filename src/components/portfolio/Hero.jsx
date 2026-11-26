@@ -11,6 +11,9 @@ const Hero = () => (
       <div className="availability"><span className="status-dot" />Open to full-time roles, freelance projects, AI/ML collaborations and startup opportunities.</div>
     </div>
     <div className="hero-visual" aria-label="Portrait of Nicholas Amissah">
+      <div className="hero-grid" aria-hidden="true" />
+      <span className="hero-code code-one" aria-hidden="true">01</span>
+      <span className="hero-code code-two" aria-hidden="true">ML</span>
       <div className="portrait-frame"><img src="https://avatars.githubusercontent.com/u/84607674?v=4" alt="Nicholas Amissah" /></div>
       <div className="portrait-note note-top">Based in Ghana <FiMapPin /></div><div className="portrait-note note-bottom">Code <span>+</span> intelligence</div>
     </div>
