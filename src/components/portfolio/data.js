@@ -49,6 +49,6 @@ export const careerTimeline = [
 export const opportunityTypes = ['Full-time opportunity', 'Freelance project', 'AI/ML collaboration', 'Startup collaboration', 'Something else'];
 
 export const recommendations = [
-  { id: 1, name: 'Stephen Addae', title: 'Angular Developer at Basonit', image: '/assets/Stephen.jpg', quote: 'I had the pleasure of working with Nicholas Amissah on a project during our time at Microverse, an online software development course.' },
-  { id: 2, name: 'Musong Ernest Akeh', title: 'Freelance Software Engineer', image: '/assets/Ernest.jpg', quote: 'Nicholas is a fantastic software engineer, and his detail-oriented approach made working with him a pleasure.' },
+  { id: 1, name: 'Stephen Addae', relationship: 'Project collaborator · Microverse', quality: 'Quality & attention to detail', image: '/assets/Stephen.jpg', quote: 'Nicholas is an exceptional frontend developer who consistently impressed me with his attention to detail and commitment to delivering high-quality work. He would be a valuable asset to any team looking for a skilled and dedicated developer.' },
+  { id: 2, name: 'Musong Ernest Akeh', relationship: 'Pair-programming collaborator · Microverse', quality: 'Collaboration & work ethic', image: '/assets/Ernest.jpg', quote: 'During our time at Microverse, we extensively pair-programmed together, and I was constantly impressed by Nicholas’s work ethic and detail-oriented approach. He is friendly, punctual, and a pleasure to work with.' },
 ];

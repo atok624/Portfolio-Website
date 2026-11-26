@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { BsList, BsXLg } from 'react-icons/bs';
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload, FiMoon, FiSun } from 'react-icons/fi';
 
 const PortfolioHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  });
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
@@ -54,7 +65,12 @@ const PortfolioHeader = () => {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}${menuOpen ? ' menu-open' : ''}`}>
       <a className="brand" href="#top" aria-label="Nicholas Amissah, home" onClick={closeMenu}><span className="brand-mark"><i>N</i><i>A</i></span><span className="brand-name">Nicholas Amissah <i className="availability-dot" aria-label="Available for opportunities" /></span></a>
-      <button className="menu-button" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <BsXLg /> : <BsList />}</button>
+      <div className="header-actions">
+        <button className="theme-toggle" type="button" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+          <FiSun className="theme-sun" /><FiMoon className="theme-moon" />
+        </button>
+        <button className="menu-button" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <BsXLg /> : <BsList />}</button>
+      </div>
       <nav className={menuOpen ? 'site-nav is-open' : 'site-nav'} aria-label="Main navigation">
         {navLink('work', 'Work')}{navLink('ai', 'AI/ML')}{navLink('about', 'About')}{navLink('contact', 'Contact')}
         <a className="nav-resume" href="/assets/Nicholas_Amissah_CV.pdf" target="_blank" rel="noreferrer">Résumé <FiDownload /></a>
