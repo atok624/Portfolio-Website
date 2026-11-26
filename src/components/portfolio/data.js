@@ -32,9 +32,18 @@ export const projects = [
 ];
 
 export const capabilities = [
-  ['01', 'Product engineering', 'Building responsive interfaces and complete web experiences with React, JavaScript and modern CSS.', 'React · JavaScript · Redux · Tailwind CSS'],
-  ['02', 'Backend & data', 'Connecting products to reliable services, databases and APIs that support real user workflows.', 'Ruby on Rails · Firebase · PostgreSQL · REST APIs'],
-  ['03', 'AI & machine learning', 'Developing practical knowledge in data analysis, model development and intelligent product experiences.', 'Python · Machine Learning · Data Analysis'],
+  ['01', 'Product engineering', 'Building responsive interfaces, managing application state and taking products from idea to deployment.', 'React · JavaScript · Redux · Responsive UI'],
+  ['02', 'Backend & data', 'Designing API-driven workflows, integrating persistent data and connecting interfaces to reliable services.', 'Ruby on Rails · Firebase · PostgreSQL · REST APIs'],
+  ['03', 'AI & machine learning', 'Developing foundations in data preparation, model evaluation and integrating intelligent behaviour into products.', 'Python · Machine Learning · Data Analysis'],
+];
+
+export const careerTimeline = [
+  { period: 'Present', title: 'MSc Artificial Intelligence & Machine Learning', organization: 'University of Ghana', description: 'Extending a software-engineering foundation through postgraduate study in intelligent systems and data-driven problem solving.', kind: 'Education' },
+  { period: '2024', title: 'Web Development Programme', organization: 'Generation Ghana', description: 'Developed React and JavaScript skills through collaborative products including a task planner and real-time chat application.', kind: 'Training' },
+  { period: '2023 — 2024', title: 'AWS re/Start', organization: 'AmaliTech', description: 'Completed intensive training in cloud foundations, Linux, Python, shell scripting and core AWS services.', kind: 'Cloud training' },
+  { period: '2023', title: 'Full-Stack Developer & Volunteer Mentor', organization: 'Microverse', description: 'Completed 1,300+ hours of remote full-stack training and later supported junior developers through code reviews and pair programming.', kind: 'Development' },
+  { period: '2019 — 2020', title: 'IT Officer — National Service', organization: 'Commonwealth Hall, University of Ghana', description: 'Supported day-to-day technology operations, resolved technical issues and collaborated with colleagues across the hall.', kind: 'Experience' },
+  { period: '2015 — 2019', title: 'BSc Information Technology', organization: 'University of Ghana', description: 'Completed undergraduate study with a final-year group project exploring machine learning for skin-disease detection.', kind: 'Education' },
 ];
 
 export const opportunityTypes = ['Full-time opportunity', 'Freelance project', 'AI/ML collaboration', 'Startup collaboration', 'Something else'];
