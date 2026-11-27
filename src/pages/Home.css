@@ -141,6 +141,9 @@ p+p { margin-top:16px; }
 .testimonial-dots button { display:grid; place-items:center; width:36px; height:44px; padding:0; border:0; border-radius:4px; background:transparent; }
 .testimonial-dots button::before { content:''; display:block; width:6px; height:6px; border-radius:8px; background:var(--muted); transition:width .2s ease,background-color .2s ease; }
 .testimonial-dots button.is-active::before { width:20px; background:var(--green); }
+.testimonial-playback { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; max-width:100%; margin:8px auto 0; padding:8px 12px; border:0; border-radius:4px; background:transparent; color:var(--muted); font-size:12px; }
+.testimonial-playback:hover:not(:disabled) { color:var(--green); }
+.testimonial-playback:disabled { cursor:default; }
 .recommendation-link { display:flex; align-items:center; gap:8px; width:fit-content; min-height:44px; margin:20px auto 0; color:var(--muted); font-size:13px; }
 .contact-section { padding-block:80px; border-block:1px solid var(--line); background:var(--surface); }
 .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:start; }
