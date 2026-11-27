@@ -28,21 +28,9 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- An npm installed on your system.
+- Node.js 26.x and npm. Install Node.js through your version manager or the [official downloads](https://nodejs.org/en/download).
 
-#### Windows
-
-[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi)
-
-#### Linux
-
-```sh
- sudo apt install nodejs
-```
-
-#### MacOS
-
-[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0.pkg)
+The Node.js major version is pinned in `package.json` and `.nvmrc`. If your version manager supports `.nvmrc`, use it to select the repository's Node.js version.
 
 ### Setup
 
@@ -61,6 +49,8 @@ Install this project with:
 ```
 
 ### Production build and PWA
+
+For Vercel, set **Project Settings → Build and Deployment → Node.js Version** to **26.x** and save before redeploying. Use `npm run build` as the build command and `dist` as the output directory. The `engines.node` entry in `package.json` also declares the deployment runtime.
 
 ```sh
 npm run build
