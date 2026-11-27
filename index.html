@@ -3,9 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="description" content="Nicholas Amissah is a full-stack developer and AI/ML master's student building practical web products and intelligent software." />
-    <meta name="theme-color" content="#0a0d0c" />
+    <script>
+      try {
+        var preferredTheme = localStorage.getItem('portfolio-theme');
+        var initialTheme = preferredTheme === 'light' || preferredTheme === 'dark' ? preferredTheme : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = initialTheme;
+        document.documentElement.style.colorScheme = initialTheme;
+      } catch (_) {}
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="Nicholas Amissah, full-stack developer in Ghana building React and Rails applications. AI/ML master's student at the University of Ghana. Open to roles and collaborations." />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nicholas Amissah — Full-stack Developer" />
+    <meta property="og:description" content="Useful software. Thoughtfully built. Explore my web applications, contributions and AI/ML studies." />
+    <meta property="og:image" content="https://nicholas-amissah.vercel.app/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nicholas Amissah — Full-stack developer and AI/ML master's student, based in Ghana." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nicholas Amissah — Full-stack Developer" />
+    <meta name="twitter:description" content="Useful software. Thoughtfully built. Web applications, project contributions and AI/ML studies." />
+    <meta name="twitter:image" content="https://nicholas-amissah.vercel.app/social-card.png" />
     <title>Nicholas Amissah — Full-stack Developer & AI/ML Student</title>
   </head>
   <body>

@@ -1,64 +1,70 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BsArrowLeft, BsArrowRight, BsArrowUpRight, BsLinkedin } from 'react-icons/bs';
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiMessageSquare } from 'react-icons/fi';
 import { recommendations } from './data';
 
 const Recommendations = () => {
   const trackRef = useRef(null);
+  const currentIndexRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
-  const isCarousel = recommendations.length > 2;
-
-  const moveTo = (nextIndex) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const cards = [...track.children];
-    const index = Math.max(0, Math.min(nextIndex, cards.length - 1));
-    cards[index]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    setActiveIndex(index);
-  };
+  const count = recommendations.length;
 
   useEffect(() => {
-    if (!isCarousel) return undefined;
     const track = trackRef.current;
-    const updateActiveCard = () => {
-      const cards = [...track.children];
-      const nearest = cards.reduce((best, card, index) => {
-        const distance = Math.abs(card.offsetLeft - track.scrollLeft);
-        return distance < best.distance ? { index, distance } : best;
-      }, { index: 0, distance: Number.POSITIVE_INFINITY });
-      setActiveIndex(nearest.index);
-    };
-    track.addEventListener('scroll', updateActiveCard, { passive: true });
-    return () => track.removeEventListener('scroll', updateActiveCard);
-  }, [isCarousel]);
+    if (!track) return undefined;
+    const observer = new ResizeObserver(() => {
+      const index = Math.min(currentIndexRef.current, count - 1);
+      track.scrollTo({ left: Math.max(index, 0) * track.clientWidth, behavior: 'auto' });
+    });
+    observer.observe(track);
+    return () => observer.disconnect();
+  }, [count]);
 
-  const handleKeys = (event) => {
-    if (!isCarousel) return;
-    if (event.key === 'ArrowRight') { event.preventDefault(); moveTo(activeIndex + 1); }
-    if (event.key === 'ArrowLeft') { event.preventDefault(); moveTo(activeIndex - 1); }
+  const moveTo = index => {
+    const track = trackRef.current;
+    if (!track) return;
+    const target = Math.max(0, Math.min(index, count - 1));
+    track.scrollTo({
+      left: target * track.clientWidth,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+    });
+  };
+  const updatePosition = () => {
+    const track = trackRef.current;
+    if (!track?.clientWidth) return;
+    const index = Math.max(0, Math.min(Math.round(track.scrollLeft / track.clientWidth), count - 1));
+    currentIndexRef.current = index;
+    setActiveIndex(index);
+  };
+  const handleKeys = event => {
+    if (event.target !== trackRef.current) return;
+    const destinations = { ArrowRight: activeIndex + 1, ArrowLeft: activeIndex - 1, Home: 0, End: count - 1 };
+    if (event.key in destinations) { event.preventDefault(); moveTo(destinations[event.key]); }
   };
 
+  if (!count) return null;
+
   return (
-  <section className="section testimonial-section" id="recommendations">
-      <div className="section-heading split-heading"><div><p className="eyebrow">Working together</p><h2>What collaborators say.</h2></div><p>Recommendations from developers I have studied, built and pair-programmed with.</p></div>
-
-      <div className="recommendation-carousel">
-        <div ref={trackRef} className={`testimonial-grid${isCarousel ? ' is-carousel' : ''}`} tabIndex={isCarousel ? 0 : undefined} onKeyDown={handleKeys} aria-label="Professional recommendations">
-          {recommendations.map((testimonial) => <figure key={testimonial.id}>
-            <div className="recommendation-top"><span>{testimonial.quality}</span><i aria-hidden="true">“</i></div>
-            <blockquote>{testimonial.quote}</blockquote>
-            <figcaption><img src={testimonial.image} alt="" /><span><strong>{testimonial.name}</strong>{testimonial.relationship}</span></figcaption>
-          </figure>)}
+    <section className="section testimonial-section" id="recommendations" aria-labelledby="recommendations-title">
+      <div className="section-heading testimonial-heading"><p className="eyebrow">Working together</p><h2 id="recommendations-title">What collaborators say.</h2><p>From developers I’ve built and pair-programmed with.</p></div>
+      <div className="testimonial-carousel">
+        <div ref={trackRef} className="testimonial-track" tabIndex={count > 1 ? 0 : undefined} onKeyDown={handleKeys} onScroll={updatePosition} role="region" aria-roledescription="carousel" aria-label="Collaborator feedback. Use left and right arrow keys to browse.">
+          {recommendations.map((item, index) => (
+            <figure className="testimonial-slide" key={item.id} role="group" aria-roledescription="slide" aria-label={(index + 1) + ' of ' + count} aria-hidden={index !== activeIndex}>
+              <FiMessageSquare className="testimonial-mark" aria-hidden="true" />
+              <blockquote>{item.quote}</blockquote>
+              <figcaption><img src={item.image} alt="" width="52" height="52" loading="lazy" /><span><strong>{item.name}</strong>{item.relationship}</span></figcaption>
+            </figure>
+          ))}
         </div>
-
-        {isCarousel && <div className="carousel-controls">
-          <p aria-live="polite"><span>{String(activeIndex + 1).padStart(2, '0')}</span> / {String(recommendations.length).padStart(2, '0')}</p>
-          <div><button type="button" onClick={() => moveTo(activeIndex - 1)} disabled={activeIndex === 0} aria-label="Previous recommendation"><BsArrowLeft /></button><button type="button" onClick={() => moveTo(activeIndex + 1)} disabled={activeIndex === recommendations.length - 1} aria-label="Next recommendation"><BsArrowRight /></button></div>
+        {count > 1 && <div className="testimonial-controls">
+          <button className="testimonial-arrow" type="button" onClick={() => moveTo(activeIndex - 1)} disabled={activeIndex === 0} aria-label="Previous recommendation"><FiArrowLeft aria-hidden="true" /></button>
+          <div className="testimonial-dots" role="group" aria-label="Choose a recommendation">{recommendations.map((item, index) => <button key={item.id} type="button" className={index === activeIndex ? 'is-active' : ''} aria-label={'Show recommendation ' + (index + 1) + ' from ' + item.name} aria-current={index === activeIndex ? 'true' : undefined} onClick={() => moveTo(index)} />)}</div>
+          <button className="testimonial-arrow" type="button" onClick={() => moveTo(activeIndex + 1)} disabled={activeIndex === count - 1} aria-label="Next recommendation"><FiArrowRight aria-hidden="true" /></button>
         </div>}
+        <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">Recommendation {activeIndex + 1} of {count}, from {recommendations[activeIndex].name}.</p>
       </div>
-
-      <a className="recommendation-link" href="https://www.linkedin.com/in/nicholas-amissah/" target="_blank" rel="noreferrer"><BsLinkedin /> View my professional profile <BsArrowUpRight /></a>
+      <a className="recommendation-link" href="https://www.linkedin.com/in/nicholas-amissah/" target="_blank" rel="noreferrer">Connect on LinkedIn <FiArrowUpRight aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
     </section>
   );
 };
-
 export default Recommendations;

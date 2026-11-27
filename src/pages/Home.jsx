@@ -10,16 +10,12 @@ import SelectedWork from '../components/portfolio/SelectedWork';
 import './Home.css';
 
 const Home = () => (
-  <main className="portfolio-shell">
+  <div className="portfolio-shell">
     <PortfolioHeader />
-    <Hero />
-    <SelectedWork />
-    <AiJourney />
-    <About />
-    <Recommendations />
-    <OpportunityContact />
+    <main id="main-content" tabIndex="-1">
+      <Hero /><SelectedWork /><AiJourney /><About /><Recommendations /><OpportunityContact />
+    </main>
     <PortfolioFooter />
-  </main>
+  </div>
 );
-
 export { Home };
