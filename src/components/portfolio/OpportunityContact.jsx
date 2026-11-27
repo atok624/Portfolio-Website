@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import { opportunityTypes } from './data';
+import { usePwaState } from '../../pwa';
 
 const OpportunityContact = () => {
+  const { offline } = usePwaState();
   const [status, setStatus] = useState('idle');
   const requestRef = useRef(null);
   const navigate = useNavigate();
@@ -17,6 +19,7 @@ const OpportunityContact = () => {
   const sendMessage = async (event) => {
     event.preventDefault();
     if (status === 'sending') return;
+    if (offline || !navigator.onLine) return;
     const data = Object.fromEntries(new FormData(event.currentTarget));
     const controller = new AbortController();
     requestRef.current = controller;
@@ -62,9 +65,10 @@ const OpportunityContact = () => {
             </details>
             <input className="form-honeypot" type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" />
             <input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_subject" value="New portfolio inquiry" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value={new URL('/thanks', window.location.origin).href} />
-            <button className="button button-primary" type="submit">{status === 'sending' ? 'Sending…' : 'Send message'}<FiArrowRight aria-hidden="true" /></button>
+            <button className="button button-primary" type="submit" disabled={offline}>{offline ? 'Reconnect to send' : status === 'sending' ? 'Sending…' : 'Send message'}<FiArrowRight aria-hidden="true" /></button>
           </fieldset>
           <p className="sr-only" role="status">{status === 'sending' ? 'Sending your message. Please wait.' : ''}</p>
+          {offline && <p className="form-offline" role="status">You’re offline. You can write your message here and reconnect to send it. Keep this page open to retain your text.</p>}
           {status === 'error' && <p className="form-error" role="alert">Delivery couldn’t be confirmed. Your message is still here. Try again, or <a href="mailto:atok948@gmail.com">email me directly</a>.</p>}
           <p className="form-privacy">Delivered via FormSubmit. I use your details to reply to your inquiry.</p>
         </form>

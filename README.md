@@ -15,7 +15,7 @@
 ## Built With
 
 - React
-- Tailwindcss
+- Vite and CSS
 
 ## Live Demo
 [Live Demo Link](https://nicholas-amissah.vercel.app/)
@@ -60,19 +60,22 @@ Install this project with:
   npm install
 ```
 
-### Running Tests
-
-To to test the project, checkout [Jest](https://jestjs.io/)
+### Production build and PWA
 
 ```sh
-npm install jest --save-dev
+npm run build
+npm run preview -- --host 127.0.0.1 --port 1000 --strictPort
 ```
 
-Then, to start the test:
+Stop the development server first if it uses the same port. Service workers are enabled only in the production build; development remains free of offline caching.
 
-```sh
-  npm run test
-```
+The build generates a versioned `dist/sw.js` and pre-caches the application, project images, local font, installation icons and résumé. After one complete online visit, the homepage, case studies and résumé are available offline. The contact form needs a connection and never queues or caches messages.
+
+Supporting browsers expose an **Install portfolio** button in the footer. On iOS, the footer explains how to add the portfolio to the home screen using Safari. Production hosting requires HTTPS; localhost is supported for testing.
+
+New builds wait for the visitor to select **Update & reload**. **Later** keeps the current version active. The Vercel configuration prevents stale service-worker scripts from being served from HTTP caches.
+
+To check offline behavior, open the production preview online, wait for **Available for offline viewing**, then enable Offline in the browser's Network panel and reload. Check a project URL and the résumé, and confirm that reconnecting enables the send button without clearing the message. Use a second build to check the update prompt. Actual message delivery must be checked separately.
 
 ### Usage
 

@@ -1,3 +1,4 @@
+@font-face { font-family:'Manrope'; font-style:normal; font-weight:400 700; font-display:swap; src:url('/fonts/manrope-latin.woff2') format('woff2'); }
 :root {
   --ink:#f2f4f1; --muted:#a9aeaa; --background:#0b0d0c; --surface:#141715;
   --surface-light:#1c201d; --line:rgba(242,244,241,.14); --green:#b7f34a;
@@ -173,6 +174,20 @@ p+p { margin-top:16px; }
 .form-privacy { margin-top:16px; color:var(--muted); font-size:12px; line-height:1.7; }
 .form-error { padding:14px; margin-top:16px; border:1px solid var(--line); border-left:3px solid var(--green); color:var(--ink); font-size:14px; line-height:1.8; }
 .form-error a { text-decoration:underline; text-underline-offset:4px; }
+.form-offline { margin-top:16px; color:var(--muted); font-size:13px; line-height:1.8; }
+.contact-form .button:disabled { opacity:.65; cursor:not-allowed; }
+.pwa-footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; padding-bottom:20px; color:var(--muted); font-size:12px; }
+.pwa-availability { display:flex; align-items:center; gap:8px; }
+.pwa-availability svg { flex:0 0 auto; }
+.pwa-install { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:8px 12px; border:1px solid var(--line); border-radius:5px; background:transparent; color:var(--ink); font-size:13px; }
+.pwa-install:hover { border-color:var(--green); color:var(--green); }
+.pwa-ios summary { padding-block:10px; cursor:pointer; }
+.pwa-ios p { max-width:340px; padding-top:8px; line-height:1.8; }
+.pwa-install-error { flex-basis:100%; }
+.pwa-update { position:fixed; z-index:60; right:24px; bottom:24px; width:min(440px,calc(100% - 48px)); padding:24px; border:1px solid var(--line); border-radius:8px; background:var(--background); color:var(--ink); box-shadow:0 12px 48px rgba(0,0,0,.2); }
+.pwa-update strong { font-size:16px; font-weight:600; }
+.pwa-update p { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.7; }
+.pwa-update-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
 .portfolio-footer { background:var(--background); }
 .footer-main { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding-block:40px; }
 .footer-main nav { display:flex; flex-wrap:wrap; gap:12px 24px; color:var(--muted); font-size:13px; }

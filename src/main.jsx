@@ -7,8 +7,10 @@ import { Home } from './pages/Home';
 import ThankYou from './pages/ThankYou';
 import ProjectCaseStudy from './pages/ProjectCaseStudy';
 import { initializeTheme } from './theme';
+import { initializePwa } from './pwa';
 
 initializeTheme();
+initializePwa();
 
 const router = createBrowserRouter([
   {
